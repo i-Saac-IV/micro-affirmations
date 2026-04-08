@@ -1,6 +1,6 @@
-# Template
+# µAffirmations
 
-Just my template repo
+A microcontroller-based affection-giving MACHINE!
 
 <!--
 > [!IMPORTANT]
