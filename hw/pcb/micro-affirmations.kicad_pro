@@ -224,7 +224,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "Rev1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -468,8 +468,12 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_footprint_libs": [
+      "micro-affirmations_footprints"
+    ],
+    "pinned_symbol_libs": [
+      "micro-affirmations_symbols"
+    ]
   },
   "meta": {
     "filename": "micro-affirmations.kicad_pro",
@@ -629,13 +633,22 @@
       {
         "filename": "micro-affirmations.kicad_sch",
         "name": "micro-affirmations",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "5bc9bd8c-4e85-4538-85a6-329775c75541"
       }
     ],
     "used_designators": "",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "5bc9bd8c-4e85-4538-85a6-329775c75541",
+      "micro-affirmations"
+    ],
+    [
+      "47cfac51-04d8-415d-a41e-e76e61201f4a",
+      "led-matrix"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
