@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "micro-affirmations_footprints") (type "KiCad") (uri "${KIPRJMOD}/micro-affirmations_footprints.pretty") (options "") (descr ""))
+)
