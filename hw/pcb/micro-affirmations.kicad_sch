@@ -10,7 +10,7 @@
 		(company "Isaac Pawley")
 	)
 	(lib_symbols
-		(symbol "Connector_Generic:Conn_01x04"
+		(symbol "Connector_Generic:Conn_01x05"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -21,7 +21,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 5.08 0)
+				(at 0 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -30,7 +30,7 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x04"
+			(property "Value" "Conn_01x05"
 				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -62,7 +62,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -95,9 +95,9 @@
 					)
 				)
 			)
-			(symbol "Conn_01x04_1_1"
+			(symbol "Conn_01x05_1_1"
 				(rectangle
-					(start -1.27 3.81)
+					(start -1.27 6.35)
 					(end 1.27 -6.35)
 					(stroke
 						(width 0.254)
@@ -105,6 +105,17 @@
 					)
 					(fill
 						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(rectangle
@@ -152,7 +163,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 5.08 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -170,7 +181,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -188,7 +199,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -206,7 +217,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -216,6 +227,24 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4269,7 +4298,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 172.72) (xy 31.75 172.72)
+			(xy 38.1 170.18) (xy 31.75 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4601,7 +4630,7 @@
 		(uuid "44ded6ea-1b7f-4d51-83dc-5e6fa0c21706")
 	)
 	(label "DEBUG_SWDIO"
-		(at 31.75 175.26 0)
+		(at 31.75 172.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4822,7 +4851,7 @@
 		(uuid "a17d6feb-0e77-4512-be05-3841faa90e98")
 	)
 	(label "DEBUG_SWCLK"
-		(at 31.75 177.8 0)
+		(at 31.75 175.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4891,6 +4920,17 @@
 			(justify left bottom)
 		)
 		(uuid "d3305450-11ea-4318-836d-1534c5de94f2")
+	)
+	(label "NRST"
+		(at 31.75 177.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5398322-e056-4f30-9f2e-b02d4be70927")
 	)
 	(label "MATRIX_K0"
 		(at 124.46 163.83 180)
@@ -5485,7 +5525,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V0")
-		(at 38.1 172.72 0)
+		(at 38.1 170.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5496,7 +5536,7 @@
 		(fields_autoplaced yes)
 		(uuid "325b79e4-04c1-4a4f-b0ed-025129f442b9")
 		(property "Reference" "#PWR033"
-			(at 38.1 176.53 0)
+			(at 38.1 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5507,7 +5547,7 @@
 			)
 		)
 		(property "Value" "+3V0"
-			(at 38.1 167.64 0)
+			(at 38.1 165.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5517,7 +5557,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.1 172.72 0)
+			(at 38.1 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5528,7 +5568,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 172.72 0)
+			(at 38.1 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5539,7 +5579,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V0\""
-			(at 38.1 172.72 0)
+			(at 38.1 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7634,6 +7674,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 26.67 175.26 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c8aad373-67ed-423d-adf9-3ebebfd574f3")
+		(property "Reference" "J2"
+			(at 26.67 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DEBUG"
+			(at 26.67 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+			(at 26.67 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 26.67 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 26.67 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "cb3d99e7-75f7-4c47-a6d2-45eb5addde23")
+		)
+		(pin "4"
+			(uuid "85fac48a-d6c9-42f7-aa7b-03656e877b14")
+		)
+		(pin "3"
+			(uuid "f104eee0-752b-47c8-a6f3-7bf06e77b53f")
+		)
+		(pin "2"
+			(uuid "0e927d6c-9635-4a45-b5fd-ddc51e154680")
+		)
+		(pin "1"
+			(uuid "9c05a0f6-5b55-4f29-a473-8b66cbf9d926")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 147.32 40.64 0)
 		(unit 1)
@@ -7944,91 +8073,6 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541"
 					(reference "#PWR032")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 26.67 177.8 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "eb1c45d2-0f53-4141-8036-f9a29eacb48d")
-		(property "Reference" "J2"
-			(at 26.67 186.69 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "DEBUG"
-			(at 26.67 184.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
-			(at 26.67 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 26.67 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 26.67 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "239ae978-5a94-4e33-973d-17162d32f779")
-		)
-		(pin "4"
-			(uuid "9515a6ae-a6b0-4d1d-90dd-d67caa8a0a33")
-		)
-		(pin "3"
-			(uuid "ca594e39-3491-456a-b850-f8700f1e6089")
-		)
-		(pin "2"
-			(uuid "62546996-b4b5-42db-a179-b423d01c4312")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541"
-					(reference "J2")
 					(unit 1)
 				)
 			)
