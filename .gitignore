@@ -25,3 +25,4 @@
 *.lck
 .history/
 *-backups/
+gerbers/
