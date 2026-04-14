@@ -4436,6 +4436,16 @@
 		)
 		(uuid "fb2d0a2a-7da4-4816-bce6-ade946f358d5")
 	)
+	(label "MATRIX_A0"
+		(at 124.46 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0e5d9329-f7ec-42d4-ae96-3d1509d165c5")
+	)
 	(label "MATRIX_K8"
 		(at 252.73 58.42 180)
 		(effects
@@ -4488,16 +4498,6 @@
 		(uuid "24af70b9-0a07-4585-a838-956fb62ecd26")
 	)
 	(label "MATRIX_A4"
-		(at 64.77 123.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2b0efc11-6aa4-4e94-af15-06ed46bc86ec")
-	)
-	(label "MATRIX_A4"
 		(at 190.5 48.26 0)
 		(effects
 			(font
@@ -4517,16 +4517,6 @@
 			(justify left bottom)
 		)
 		(uuid "2c559b7b-9b4e-451c-98fc-81becafd331d")
-	)
-	(label "MATRIX_A9"
-		(at 124.46 168.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2f2f26ef-fc8f-4d73-8102-dace9e780cae")
 	)
 	(label "MATRIX_K6"
 		(at 252.73 53.34 180)
@@ -4660,6 +4650,16 @@
 		)
 		(uuid "50591b3b-ce12-4dea-ac35-67184730022d")
 	)
+	(label "MATRIX_A8"
+		(at 124.46 130.81 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "520a9da1-7a3e-4984-90e7-cd9228718241")
+	)
 	(label "MATRIX_K2"
 		(at 124.46 140.97 180)
 		(effects
@@ -4689,6 +4689,16 @@
 			(justify left bottom)
 		)
 		(uuid "544bedce-3877-42ba-bba7-15519386abf6")
+	)
+	(label "MATRIX_A4"
+		(at 124.46 168.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5a421b11-2c1c-449d-b4d8-d234df7017da")
 	)
 	(label "MATRIX_A9"
 		(at 190.5 60.96 0)
@@ -4750,16 +4760,6 @@
 		)
 		(uuid "849caac5-de9a-4f9b-af82-63b384c4b67a")
 	)
-	(label "MATRIX_A5"
-		(at 124.46 115.57 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8699483a-7ded-472b-b407-312c5b03a1c9")
-	)
 	(label "MATRIX_A[0..9]"
 		(at 144.78 97.79 0)
 		(effects
@@ -4769,16 +4769,6 @@
 			(justify left bottom)
 		)
 		(uuid "898e4b48-d06d-4116-9626-d20a6a9246c7")
-	)
-	(label "MATRIX_A8"
-		(at 124.46 171.45 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "92eb99fc-b9b6-4a7c-b801-afa9cda7f4f0")
 	)
 	(label "MATRIX_A8"
 		(at 190.5 58.42 0)
@@ -4800,16 +4790,6 @@
 		)
 		(uuid "93ad2366-3430-410b-82db-a4869f386490")
 	)
-	(label "MATRIX_A0"
-		(at 64.77 110.49 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "95871afc-ba39-4585-a878-da1bdc050f53")
-	)
 	(label "MATRIX_K4"
 		(at 124.46 135.89 180)
 		(effects
@@ -4830,26 +4810,6 @@
 		)
 		(uuid "9e9bddc0-89da-4bf3-bcb4-eb813bafe865")
 	)
-	(label "MATRIX_A7"
-		(at 124.46 173.99 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a0fe7055-8690-4960-bd0d-1cd8c54ae837")
-	)
-	(label "MATRIX_A3"
-		(at 64.77 125.73 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a17d6feb-0e77-4512-be05-3841faa90e98")
-	)
 	(label "DEBUG_SWCLK"
 		(at 31.75 175.26 0)
 		(effects
@@ -4862,6 +4822,16 @@
 		(uuid "a534e6bc-3ed8-486c-83b7-826eee3bbc1c")
 	)
 	(label "MATRIX_A2"
+		(at 124.46 173.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a55656ed-8ded-4af6-a3a1-d9c424db5bbf")
+	)
+	(label "MATRIX_A7"
 		(at 124.46 118.11 180)
 		(effects
 			(font
@@ -4869,27 +4839,17 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "acd65549-a3fd-4f69-bb1a-2b1a5890371e")
+		(uuid "aaebd81e-eb1f-4236-a4ca-4dfe8fea3298")
 	)
-	(label "MATRIX_A1"
-		(at 124.46 130.81 180)
+	(label "MATRIX_A5"
+		(at 64.77 123.19 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "b2406850-82fd-4ee6-a2e8-49a94746556a")
-	)
-	(label "MATRIX_A6"
-		(at 124.46 113.03 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b68f47ae-09c5-4ad7-a2e1-def769450770")
+		(uuid "be9cd790-3945-444c-ad91-17f164b31483")
 	)
 	(label "MATRIX_K5"
 		(at 124.46 110.49 180)
@@ -4910,6 +4870,16 @@
 			(justify left bottom)
 		)
 		(uuid "ca9abb30-f6c8-4976-bdbe-cd19708378b1")
+	)
+	(label "MATRIX_A1"
+		(at 124.46 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ceb80f56-cff6-445f-a209-7c2790fdddff")
 	)
 	(label "MATRIX_A3"
 		(at 190.5 45.72 0)
@@ -4932,6 +4902,16 @@
 		)
 		(uuid "d5398322-e056-4f30-9f2e-b02d4be70927")
 	)
+	(label "MATRIX_A3"
+		(at 124.46 171.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ddfa32a5-f53a-4b01-973e-7eccc9fff2ef")
+	)
 	(label "MATRIX_K0"
 		(at 124.46 163.83 180)
 		(effects
@@ -4942,6 +4922,16 @@
 		)
 		(uuid "e4fa0459-fcb1-4f4c-83dc-1c6370f4c8bb")
 	)
+	(label "MATRIX_A9"
+		(at 64.77 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e7f79b15-df4e-4d2d-aeb5-575e02d6b41e")
+	)
 	(label "MATRIX_K8"
 		(at 124.46 102.87 180)
 		(effects
@@ -4951,6 +4941,16 @@
 			(justify right bottom)
 		)
 		(uuid "e9120472-d93a-41c7-b355-5d947dbeed4a")
+	)
+	(label "MATRIX_A6"
+		(at 64.77 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f3faab82-48d1-4950-b301-055b2eba983e")
 	)
 	(label "DEBUG_SWDIO"
 		(at 64.77 128.27 0)

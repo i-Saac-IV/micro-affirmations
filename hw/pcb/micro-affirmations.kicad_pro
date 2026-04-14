@@ -54,7 +54,24 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "silk_edge_clearance|101609220|130679999|19fb80d8-6bbb-4330-9e64-b3d411189291|7c8ba0f4-5960-4088-88e9-b5b21fcb552f",
+          ""
+        ],
+        [
+          "silk_edge_clearance|105580533|130680000|82d57448-9f6f-4612-bab0-0b979d3f8cb0|866eb6cc-d320-4c69-9721-969700df5507",
+          ""
+        ],
+        [
+          "silk_over_copper|101609220|130679999|7c8ba0f4-5960-4088-88e9-b5b21fcb552f|19fb80d8-6bbb-4330-9e64-b3d411189291",
+          ""
+        ],
+        [
+          "silk_over_copper|105580533|130680000|866eb6cc-d320-4c69-9721-969700df5507|82d57448-9f6f-4612-bab0-0b979d3f8cb0",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -499,6 +516,36 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.15,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Fine",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.15,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "High Current",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       }
     ],
     "meta": {
@@ -506,7 +553,24 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "High Current",
+        "pattern": "+3V0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "High Current",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "Fine",
+        "pattern": "/DEBUG*"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -636,7 +700,7 @@
         "uuid": "5bc9bd8c-4e85-4538-85a6-329775c75541"
       }
     ],
-    "used_designators": "",
+    "used_designators": "J2",
     "variants": []
   },
   "sheets": [
