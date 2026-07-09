@@ -49,22 +49,18 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, MATRIX_K9_Pin|MATRIX_K8_Pin|MATRIX_K7_Pin|MATRIX_K6_Pin
-                          |MATRIX_K5_Pin|MATRIX_A6_Pin|MATRIX_A5_Pin|MATRIX_A2_Pin
-                          |MATRIX_A1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, MATRIX_A9_Pin|MATRIX_A8_Pin|MATRIX_A7_Pin|MATRIX_A6_Pin
+                          |MATRIX_A5_Pin|MATRIX_K6_Pin|MATRIX_K5_Pin|MATRIX_K2_Pin
+                          |MATRIX_K1_Pin|MATRIX_K0_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, MATRIX_K4_Pin|MATRIX_K3_Pin|MATRIX_K2_Pin|MATRIX_K1_Pin
-                          |MATRIX_K0_Pin|MATRIX_A9_Pin|MATRIX_A8_Pin|MATRIX_A7_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, MATRIX_A4_Pin|MATRIX_A3_Pin|MATRIX_A2_Pin|MATRIX_A1_Pin
+                          |MATRIX_A0_Pin|MATRIX_K9_Pin|MATRIX_K8_Pin|MATRIX_K7_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, MATRIX_A4_Pin|MATRIX_A3_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(MATRIX_A0_GPIO_Port, MATRIX_A0_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, MATRIX_K4_Pin|MATRIX_K3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : CHARGE_SENSE_Pin */
   GPIO_InitStruct.Pin = CHARGE_SENSE_Pin;
@@ -72,39 +68,38 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(CHARGE_SENSE_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : MATRIX_K9_Pin MATRIX_K8_Pin MATRIX_K7_Pin MATRIX_K6_Pin
-                           MATRIX_K5_Pin MATRIX_A6_Pin MATRIX_A5_Pin MATRIX_A2_Pin
-                           MATRIX_A1_Pin */
-  GPIO_InitStruct.Pin = MATRIX_K9_Pin|MATRIX_K8_Pin|MATRIX_K7_Pin|MATRIX_K6_Pin
-                          |MATRIX_K5_Pin|MATRIX_A6_Pin|MATRIX_A5_Pin|MATRIX_A2_Pin
-                          |MATRIX_A1_Pin;
+  /*Configure GPIO pins : MATRIX_A9_Pin MATRIX_A8_Pin MATRIX_A7_Pin MATRIX_A6_Pin
+                           MATRIX_A5_Pin MATRIX_K6_Pin MATRIX_K5_Pin MATRIX_K2_Pin
+                           MATRIX_K1_Pin MATRIX_K0_Pin */
+  GPIO_InitStruct.Pin = MATRIX_A9_Pin|MATRIX_A8_Pin|MATRIX_A7_Pin|MATRIX_A6_Pin
+                          |MATRIX_A5_Pin|MATRIX_K6_Pin|MATRIX_K5_Pin|MATRIX_K2_Pin
+                          |MATRIX_K1_Pin|MATRIX_K0_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : MATRIX_K4_Pin MATRIX_K3_Pin MATRIX_K2_Pin MATRIX_K1_Pin
-                           MATRIX_K0_Pin MATRIX_A9_Pin MATRIX_A8_Pin MATRIX_A7_Pin */
-  GPIO_InitStruct.Pin = MATRIX_K4_Pin|MATRIX_K3_Pin|MATRIX_K2_Pin|MATRIX_K1_Pin
-                          |MATRIX_K0_Pin|MATRIX_A9_Pin|MATRIX_A8_Pin|MATRIX_A7_Pin;
+  /*Configure GPIO pins : MATRIX_A4_Pin MATRIX_A3_Pin MATRIX_A2_Pin MATRIX_A1_Pin
+                           MATRIX_A0_Pin MATRIX_K9_Pin MATRIX_K8_Pin MATRIX_K7_Pin */
+  GPIO_InitStruct.Pin = MATRIX_A4_Pin|MATRIX_A3_Pin|MATRIX_A2_Pin|MATRIX_A1_Pin
+                          |MATRIX_A0_Pin|MATRIX_K9_Pin|MATRIX_K8_Pin|MATRIX_K7_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : MATRIX_A4_Pin MATRIX_A3_Pin */
-  GPIO_InitStruct.Pin = MATRIX_A4_Pin|MATRIX_A3_Pin;
+  /*Configure GPIO pins : MATRIX_K4_Pin MATRIX_K3_Pin */
+  GPIO_InitStruct.Pin = MATRIX_K4_Pin|MATRIX_K3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : MATRIX_A0_Pin */
-  GPIO_InitStruct.Pin = MATRIX_A0_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  /*Configure GPIO pin : CAP_VOLT_Pin */
+  GPIO_InitStruct.Pin = CAP_VOLT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(MATRIX_A0_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(CAP_VOLT_GPIO_Port, &GPIO_InitStruct);
 
 }
 
