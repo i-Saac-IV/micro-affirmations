@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "LED Matrix")
-		(rev "RevB")
+		(rev "RevC")
 		(company "Isaac Pawley")
 	)
 	(lib_symbols
@@ -388,7 +388,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:Q_NMOS_DGS"
+		(symbol "Transistor_FET:Q_NMOS_GSD"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -409,7 +409,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "Q_NMOS_DGS"
+			(property "Value" "Q_NMOS_GSD"
 				(at 5.08 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -442,7 +442,7 @@
 					)
 				)
 			)
-			(property "Description" "N-MOSFET transistor, drain/gate/source"
+			(property "Description" "N-MOSFET transistor, gate/source/drain"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -464,7 +464,7 @@
 					)
 				)
 			)
-			(symbol "Q_NMOS_DGS_0_1"
+			(symbol "Q_NMOS_GSD_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -631,11 +631,11 @@
 					)
 				)
 			)
-			(symbol "Q_NMOS_DGS_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
+			(symbol "Q_NMOS_GSD_1_1"
+				(pin input line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "D"
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -650,10 +650,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
+				(pin passive line
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "G"
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -669,9 +669,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "S"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -805,7 +805,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "These LEDs are the APTD1608LSURCK from Kingbright\nThey work with a forward current as low as 2mA (Vf = 1.75V)\nHence the large current limiting resistor...\n\n(3.3 - Vf) / 0.002 = 775Ω"
+	(text "These LEDs are the APTD1608LSURCK from Kingbright\nThey work with a forward current as low as 2mA (Vf = 1.75V)\nHence the large current limiting resistor...\n\n(3.3 - Vf) / 0.002 = 775Ω\n\nor\n\n(3.3 - Vf) / 0.001 = 1550Ω (untested)"
 		(exclude_from_sim no)
 		(at 52.578 50.546 0)
 		(effects
@@ -2388,16 +2388,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 207.01) (xy 191.77 207.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "397791a1-d527-48a5-b869-be9f1ccc31be")
-	)
-	(wire
-		(pts
 			(xy 237.49 62.23) (xy 237.49 74.93)
 		)
 		(stroke
@@ -3205,6 +3195,16 @@
 			(type default)
 		)
 		(uuid "a7b3d1eb-216c-4f33-b5f0-e7586709bd17")
+	)
+	(wire
+		(pts
+			(xy 135.89 207.01) (xy 191.77 207.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa005522-ec60-410c-abb8-d0ab2204e3a1")
 	)
 	(wire
 		(pts
@@ -4320,6 +4320,102 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 184.15 198.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "01b71017-3104-4bf4-a206-00d2d7371450")
+		(property "Reference" "Q4"
+			(at 190.5 196.8499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCH"
+			(at 190.5 199.3899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 189.23 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 184.15 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "SSM3K37FS,LF"
+			(at 184.15 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "3532a5c5-f357-4611-a2ed-1a3de14db400")
+		)
+		(pin "2"
+			(uuid "b291b962-e010-4dc2-9a5a-57080dbceb05")
+		)
+		(pin "1"
+			(uuid "0bd8a3dc-edaa-4274-87d0-f08c706ffea3")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED_45deg")
 		(at 158.75 46.99 0)
 		(unit 1)
@@ -4926,102 +5022,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 260.35 251.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0e35f420-7394-4984-985c-f98b5551773f")
-		(property "Reference" "Q10"
-			(at 266.7 250.1899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSM3K37FSLF"
-			(at 266.7 252.7299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 265.43 248.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 260.35 251.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 260.35 251.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "SSM3K37FS,LF"
-			(at 260.35 251.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b12249")
-		)
-		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf0")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9da5")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED_45deg")
 		(at 209.55 148.59 0)
 		(unit 1)
@@ -5119,198 +5119,6 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
 					(reference "D90")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 222.25 224.79 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0e534b0f-b7fd-4270-86ab-f8de2652208d")
-		(property "Reference" "Q7"
-			(at 228.6 223.5199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSM3K37FSLF"
-			(at 228.6 226.0599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 227.33 222.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 224.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 222.25 224.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "SSM3K37FS,LF"
-			(at 222.25 224.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b1224a")
-		)
-		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf1")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9da6")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 209.55 215.9 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "117c9938-29b5-458a-80ce-1fa5f73a9bc0")
-		(property "Reference" "Q6"
-			(at 215.9 214.6299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSM3K37FSLF"
-			(at 215.9 217.1699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 214.63 213.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 209.55 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 209.55 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "SSM3K37FS,LF"
-			(at 209.55 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b1224b")
-		)
-		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf2")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9da7")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -6595,6 +6403,102 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 196.85 207.01 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f72ba02-61e3-420a-9a97-b1666bae1e63")
+		(property "Reference" "Q5"
+			(at 203.2 205.7399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCH"
+			(at 203.2 208.2799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 201.93 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 196.85 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "SSM3K37FS,LF"
+			(at 196.85 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "65f07e7e-2dcc-4670-9fa0-8e93e295c1ae")
+		)
+		(pin "2"
+			(uuid "e734f494-a1be-431c-8c8c-d04915d688a8")
+		)
+		(pin "1"
+			(uuid "d5db191d-a2e4-41c5-a08e-f187b12006a2")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 212.09 220.98 0)
 		(unit 1)
@@ -6970,6 +6874,102 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 234.95 233.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3696352e-1fe6-4afa-a699-ec1de75d5995")
+		(property "Reference" "Q8"
+			(at 241.3 232.4099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCH"
+			(at 241.3 234.9499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 240.03 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 234.95 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "SSM3K37FS,LF"
+			(at 234.95 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "2084d232-0d70-4c7f-bfd6-7bfb9211f97c")
+		)
+		(pin "2"
+			(uuid "631cba63-7e0e-47e1-acb4-e9c6e13d917d")
+		)
+		(pin "1"
+			(uuid "1d9dcc6a-2354-4526-9f05-e273f29a4b9d")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED_45deg")
 		(at 222.25 46.99 0)
 		(unit 1)
@@ -7261,6 +7261,102 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
 					(reference "D46")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 260.35 251.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d353864-306d-48fb-bb6f-a59372fd7106")
+		(property "Reference" "Q10"
+			(at 266.7 250.1899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCH"
+			(at 266.7 252.7299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 265.43 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 260.35 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "SSM3K37FS,LF"
+			(at 260.35 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "18fb4e98-1b8b-47a2-a35e-797ad7571f57")
+		)
+		(pin "2"
+			(uuid "e78dd63a-e0a2-45e0-844a-98300b067b3d")
+		)
+		(pin "1"
+			(uuid "62135773-002e-4f89-b0e0-0d920ebd499a")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
+					(reference "Q10")
 					(unit 1)
 				)
 			)
@@ -8672,6 +8768,102 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 158.75 180.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5e58e47a-1b4f-461e-9e06-b20df58fd55f")
+		(property "Reference" "Q2"
+			(at 165.1 179.0699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCH"
+			(at 165.1 181.6099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 163.83 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 158.75 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "SSM3K37FS,LF"
+			(at 158.75 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "c30fade8-6bd6-468e-84a9-829e80a4fb39")
+		)
+		(pin "2"
+			(uuid "065ceb14-ace9-4158-b3b3-58812b6e3ce3")
+		)
+		(pin "1"
+			(uuid "03400fc8-a0e4-42eb-8b0f-bc43924f4040")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED_45deg")
 		(at 234.95 85.09 0)
 		(unit 1)
@@ -8769,6 +8961,102 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
 					(reference "D42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 247.65 242.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "632aa09b-d5d5-42c9-9aea-77f11cc5a42b")
+		(property "Reference" "Q9"
+			(at 254 241.2999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCH"
+			(at 254 243.8399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 252.73 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 247.65 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "SSM3K37FS,LF"
+			(at 247.65 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "2c5557ce-f353-485e-b60e-1299e80d274d")
+		)
+		(pin "2"
+			(uuid "02a7b59e-57cc-4516-9bcd-94912f540d15")
+		)
+		(pin "1"
+			(uuid "5ae17a54-9f74-48e6-853b-afcdd29dd30c")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
+					(reference "Q9")
 					(unit 1)
 				)
 			)
@@ -10465,102 +10753,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 146.05 171.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7d515ea2-501f-46e0-9067-598ce0ee1b83")
-		(property "Reference" "Q1"
-			(at 152.4 170.1799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSM3K37FSLF"
-			(at 152.4 172.7199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 151.13 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 146.05 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "SSM3K37FS,LF"
-			(at 146.05 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b1224c")
-		)
-		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf3")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9da8")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED_45deg")
 		(at 209.55 135.89 0)
 		(unit 1)
@@ -11966,102 +12158,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 158.75 180.34 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "969c1beb-4bda-449f-b757-44d20f060cd8")
-		(property "Reference" "Q2"
-			(at 165.1 179.0699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSM3K37FSLF"
-			(at 165.1 181.6099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 163.83 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 158.75 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 158.75 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "SSM3K37FS,LF"
-			(at 158.75 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b1224d")
-		)
-		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf4")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9da9")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED_45deg")
 		(at 234.95 59.69 0)
 		(unit 1)
@@ -12159,6 +12255,102 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
 					(reference "D22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 171.45 189.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9782b624-76d6-4486-a39f-a0fad679d4c5")
+		(property "Reference" "Q3"
+			(at 177.8 187.9599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCH"
+			(at 177.8 190.4999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 176.53 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 171.45 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "SSM3K37FS,LF"
+			(at 171.45 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "f9709019-8f3b-473e-a05e-541be676c4ba")
+		)
+		(pin "2"
+			(uuid "636d6e6d-f9ee-4633-9281-becb4fb31bdd")
+		)
+		(pin "1"
+			(uuid "848779eb-10b4-4c5f-be1c-21ab49b8149f")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -12456,102 +12648,6 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
 					(reference "D16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 171.45 189.23 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9d6d9627-e3ed-4cd2-9ae9-40f36b957490")
-		(property "Reference" "Q3"
-			(at 177.8 187.9599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSM3K37FSLF"
-			(at 177.8 190.4999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 176.53 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 189.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 171.45 189.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "SSM3K37FS,LF"
-			(at 171.45 189.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b1224e")
-		)
-		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf5")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9daa")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -13836,6 +13932,102 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 146.05 171.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "afab942a-18dd-45d4-9a8e-686000b1b65a")
+		(property "Reference" "Q1"
+			(at 152.4 170.1799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCH"
+			(at 152.4 172.7199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 151.13 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 146.05 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "SSM3K37FS,LF"
+			(at 146.05 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "2e9d30e6-5594-4333-b78f-cea336612971")
+		)
+		(pin "2"
+			(uuid "c42489b7-8d5f-4d90-a2e4-771a925dbc1c")
+		)
+		(pin "1"
+			(uuid "5dbe8d45-0c2b-48ae-b843-5227d0420497")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED_45deg")
 		(at 222.25 85.09 0)
 		(unit 1)
@@ -13933,102 +14125,6 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
 					(reference "D41")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 196.85 207.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b0eeb843-345c-4caf-b8c3-5d7752084fa3")
-		(property "Reference" "Q5"
-			(at 203.2 205.7399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSM3K37FSLF"
-			(at 203.2 208.2799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 201.93 204.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 196.85 207.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 196.85 207.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "SSM3K37FS,LF"
-			(at 196.85 207.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b1224f")
-		)
-		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf6")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9dab")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -14235,102 +14331,6 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
 					(reference "D20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 247.65 242.57 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b46b11ba-9978-4f6a-b8a1-4d00932e9314")
-		(property "Reference" "Q9"
-			(at 254 241.2999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSM3K37FSLF"
-			(at 254 243.8399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 252.73 240.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 247.65 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 247.65 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "SSM3K37FS,LF"
-			(at 247.65 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b12250")
-		)
-		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf7")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9dac")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q9")
 					(unit 1)
 				)
 			)
@@ -15149,8 +15149,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 234.95 233.68 0)
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 222.25 224.79 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15159,9 +15159,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c3cf5e2b-3d46-4e2b-a62d-8d906f8f7a41")
-		(property "Reference" "Q8"
-			(at 241.3 232.4099 0)
+		(uuid "c12fe44c-9c24-46f9-8783-c941a2baa2d2")
+		(property "Reference" "Q7"
+			(at 228.6 223.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15171,8 +15171,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SSM3K37FSLF"
-			(at 241.3 234.9499 0)
+		(property "Value" "NCH"
+			(at 228.6 226.0599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15183,7 +15183,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 240.03 231.14 0)
+			(at 227.33 222.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15194,7 +15194,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 234.95 233.68 0)
+			(at 222.25 224.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15204,8 +15204,8 @@
 				)
 			)
 		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 234.95 233.68 0)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 222.25 224.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15216,7 +15216,7 @@
 			)
 		)
 		(property "PN" "SSM3K37FS,LF"
-			(at 234.95 233.68 0)
+			(at 222.25 224.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15226,19 +15226,19 @@
 				)
 			)
 		)
+		(pin "3"
+			(uuid "72c31f1e-2896-48d6-8d02-0fdc1c89366a")
+		)
 		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b12251")
+			(uuid "8f54d0e6-e7ff-413d-8059-412e19a152ad")
 		)
 		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf8")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9dad")
+			(uuid "2e69d359-d304-471f-a73a-1a7a25b01e73")
 		)
 		(instances
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q8")
+					(reference "Q7")
 					(unit 1)
 				)
 			)
@@ -16794,6 +16794,102 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 209.55 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "edb04d0a-93fb-4a1e-aa38-6a4fc4385e88")
+		(property "Reference" "Q6"
+			(at 215.9 214.6299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NCH"
+			(at 215.9 217.1699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
+			(at 214.63 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 209.55 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 209.55 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "SSM3K37FS,LF"
+			(at 209.55 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "91d30f26-0ff2-4277-8ff8-0339eb250028")
+		)
+		(pin "2"
+			(uuid "1e9f550c-8e6f-4b44-98ac-b01999b032d6")
+		)
+		(pin "1"
+			(uuid "dbe11353-2ec7-4fd4-b322-40ab3363f07d")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
+					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED_45deg")
 		(at 234.95 148.59 0)
 		(unit 1)
@@ -16994,102 +17090,6 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
 					(reference "D86")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:Q_NMOS_DGS")
-		(at 184.15 198.12 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f0d5bbdf-688c-4ba9-89f6-4a86141047da")
-		(property "Reference" "Q4"
-			(at 190.5 196.8499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSM3K37FSLF"
-			(at 190.5 199.3899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-416"
-			(at 189.23 195.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 184.15 198.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/gate/source"
-			(at 184.15 198.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "SSM3K37FS,LF"
-			(at 184.15 198.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "38b0ff7c-92e3-457a-8e99-369771b12252")
-		)
-		(pin "1"
-			(uuid "1bfc231f-dc7e-4c5a-b0bc-f1c3a2be4cf9")
-		)
-		(pin "3"
-			(uuid "c1b270cf-9431-4630-b540-b34ab54d9dae")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541/47cfac51-04d8-415d-a41e-e76e61201f4a"
-					(reference "Q4")
 					(unit 1)
 				)
 			)
