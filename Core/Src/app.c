@@ -48,40 +48,36 @@ uint16_t ADC_Read(ADC_Input_t input)
 }
 
 #include "matrix.h"
+#include "nanoGL.h"
 
 void app_main(void) {
+
+    char c = ' ';
 
     uint32_t now = 0;
     uint32_t next = 0;
 
+    nanoGL_clear();
+
     while (1) {
 
         if (HAL_GetTick() > next) {
-            next = HAL_GetTick() + 25;
+            next = HAL_GetTick() + 250;
+            nanoGL_clear();
+            char str[3] = { c, '|', '\0' };
+            nanoGL_drawString(0, 0, str, &Font_5x5);
 
-            static uint8_t row = 0;
-            static uint8_t col = 0;
+            c++;
 
-            matrix_setPixel(col, row, MATRIX_OFF);
-
-            if (col >= 19) {
-                col = 0;
-                if (row >= 4) {
-                    row = 0;
-                } else {
-                    row++;
-                }
-            } else {
-                col++;
+            // wrap back to space after '~'
+            if (c > '~') {
+                c = ' ';
             }
-
-            matrix_setPixel(col, row, MATRIX_ON);
         }
 
-        matrix_updateMultiplex_NonBlocking();
+        matrix_updateMultiplex();
 
         now = HAL_GetTick();
         while (HAL_GetTick() < now + 1) {};
-    }
-    
+    }    
 }
