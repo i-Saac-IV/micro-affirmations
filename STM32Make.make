@@ -77,9 +77,11 @@ endif
 C_SOURCES =  \
 Core/Src/adc.c \
 Core/Src/app.c \
+Core/Src/fonts.c \
 Core/Src/gpio.c \
 Core/Src/main.c \
 Core/Src/matrix.c \
+Core/Src/nanoGL.c \
 Core/Src/stm32c0xx_hal_msp.c \
 Core/Src/stm32c0xx_it.c \
 Core/Src/syscalls.c \
