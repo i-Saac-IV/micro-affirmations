@@ -70,3 +70,22 @@ void nanoGL_clear(void) {
         }
     }
 }
+
+void nanoGL_drawBitmap(int16_t x, int16_t y, const unsigned char* bitmap, uint8_t w, uint8_t h) {
+    int16_t byteWidth = (w + 7) / 8;
+    uint8_t byte = 0;
+
+    for (uint8_t row = 0; row < h; row++, y++) {
+        for (uint8_t col = 0; col < w; col++) {
+            if (col & 7) {
+                byte <<= 1;
+            } else {
+                byte = (*(const unsigned char *)(&bitmap[row * byteWidth + col / 8]));
+            }
+
+            if (byte & 0x80) {
+                matrix_setPixel(x + col, y, MATRIX_ON);
+            }
+        }
+    }
+}
