@@ -53,6 +53,8 @@ void app_updateMultiplex(void) {
     matrix_updateMultiplex();
 }
 
+#include "bitmaps.h"
+
 void app_main(void) {
     nanoGL_clear();
 
@@ -62,8 +64,8 @@ void app_main(void) {
 
     static int16_t scrollX = PHYSICAL_COLS;
 
-    if (HAL_GPIO_ReadPin(CHARGE_SENSE_GPIO_Port, CHARGE_SENSE_Pin)) {
-
+    while (HAL_GPIO_ReadPin(CHARGE_SENSE_GPIO_Port, CHARGE_SENSE_Pin)) {
+        nanoGL_drawBitmap(0, 0, battery_20x5, 20, 5);
     }
 
     while (1) {
