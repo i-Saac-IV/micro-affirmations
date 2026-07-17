@@ -27,3 +27,6 @@ compile_commands.json
 .history/
 *-backups/
 gerbers/
+
+# Secrets
+messages.local.c
