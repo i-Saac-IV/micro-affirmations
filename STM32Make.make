@@ -82,6 +82,7 @@ Core/Src/gpio.c \
 Core/Src/main.c \
 Core/Src/matrix.c \
 Core/Src/messages.c \
+Core/Src/messages.local.c \
 Core/Src/nanoGL.c \
 Core/Src/stm32c0xx_hal_msp.c \
 Core/Src/stm32c0xx_it.c \
