@@ -56,19 +56,31 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
+          "clearance|168097200|116918211|ec104548-879f-48dc-8208-7dc768dd9116|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
+          "clearance|168097200|117412622|8363f73c-01d9-4a68-ad14-91caa4eba88c|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
+          "clearance|168097200|117912748|469f01aa-f1c7-4d62-8cf5-fb45d4812bf0|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
+          "clearance|168097200|118412874|4815512d-599c-4d36-9c0f-42b80b2ed166|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
+          "clearance|168097200|118913000|c7c2835c-b5d2-4d12-9684-5160cae28f32|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
+          "clearance|168097200|119413126|d2dddd6b-10fd-47fe-92b8-e0fe46edd436|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
           "clearance|168097200|119667126|138deb7a-c070-42df-b33c-afb25b4b0f58|d2dddd6b-10fd-47fe-92b8-e0fe46edd436",
-          ""
-        ],
-        [
-          "clearance|168249600|116918211|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|ec104548-879f-48dc-8208-7dc768dd9116",
-          ""
-        ],
-        [
-          "clearance|168249600|117412622|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|8363f73c-01d9-4a68-ad14-91caa4eba88c",
-          ""
-        ],
-        [
-          "clearance|168249600|117912748|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|469f01aa-f1c7-4d62-8cf5-fb45d4812bf0",
           ""
         ],
         [
@@ -76,39 +88,27 @@
           ""
         ],
         [
-          "clearance|168249600|118412874|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|4815512d-599c-4d36-9c0f-42b80b2ed166",
-          ""
-        ],
-        [
           "clearance|168249600|118900000|1bb189a4-6af1-47dd-bb62-f9927b6870f0|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
           ""
         ],
         [
-          "clearance|168249600|118913000|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|c7c2835c-b5d2-4d12-9684-5160cae28f32",
-          ""
-        ],
-        [
-          "clearance|168249600|119413126|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|d2dddd6b-10fd-47fe-92b8-e0fe46edd436",
-          ""
-        ],
-        [
-          "clearance|169341800|116918211|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|fd86322e-4923-44cd-997c-cf215efe5199",
-          ""
-        ],
-        [
-          "clearance|169341800|117412622|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|2e5ebe05-eaf7-47c6-a48d-ddddc1264d06",
-          ""
-        ],
-        [
-          "clearance|169341800|117912748|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|219c5f6c-5663-43f1-87d7-a90e57e5ab09",
-          ""
-        ],
-        [
-          "clearance|169341800|118412874|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc|75bb91e6-2ce3-4862-b666-0ff005421568",
-          ""
-        ],
-        [
           "clearance|169341800|118670000|4bb986c2-d7b5-4f07-b4cd-a4df2d2c3cff|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
+          "clearance|169494200|116918211|fd86322e-4923-44cd-997c-cf215efe5199|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
+          "clearance|169494200|117412622|2e5ebe05-eaf7-47c6-a48d-ddddc1264d06|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
+          "clearance|169494200|117912748|219c5f6c-5663-43f1-87d7-a90e57e5ab09|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          ""
+        ],
+        [
+          "clearance|169494200|118412874|75bb91e6-2ce3-4862-b666-0ff005421568|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
           ""
         ],
         [
@@ -140,7 +140,7 @@
           ""
         ],
         [
-          "silk_overlap|130933153|101554819|97a36f83-9cc6-4a12-a396-243a2634cf23|df09e7c7-4154-45e5-921d-b2f56f0a9683",
+          "silk_overlap|130861724|101554819|97a36f83-9cc6-4a12-a396-243a2634cf23|df09e7c7-4154-45e5-921d-b2f56f0a9683",
           ""
         ],
         [
@@ -693,7 +693,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "gerbers/RevC/",
+      "plot": "gerbers/RevD/",
       "specctra_dsn": "",
       "vrml": ""
     },
