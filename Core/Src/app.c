@@ -49,6 +49,7 @@ uint16_t ADC_Read(ADC_Input_t input)
 
 #include "matrix.h"
 #include "nanoGL.h"
+#include "messages.h"
 
 void app_main(void) {
 
@@ -66,10 +67,10 @@ void app_main(void) {
             next = HAL_GetTick() + 75;
             nanoGL_clear();
 
-            nanoGL_drawString(scrollX, 0, "Here is a long message...", &Font_5x5);
+            nanoGL_drawString(scrollX, 0, messages[2], &Font_5x5);
             scrollX--;
             
-            if (scrollX < -nanoGL_stringWidth("Here is a long message...", &Font_5x5)) {
+            if (scrollX < -nanoGL_stringWidth(messages[2], &Font_5x5)) {
                 scrollX = PHYSICAL_COLS;
             }
         }
