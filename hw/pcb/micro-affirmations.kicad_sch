@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "μAffirmations")
-		(rev "RevC")
+		(rev "RevD")
 		(company "Isaac Pawley")
 	)
 	(lib_symbols
@@ -3801,6 +3801,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 92.71) (xy 105.41 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "659485c6-613e-4d31-a199-23c12f536d9e")
+	)
+	(wire
+		(pts
 			(xy 46.99 102.87) (xy 80.01 102.87)
 		)
 		(stroke
@@ -4329,16 +4339,6 @@
 		)
 		(uuid "fb43982c-bff2-4527-8678-81a7b88304f8")
 	)
-	(wire
-		(pts
-			(xy 105.41 153.67) (xy 113.03 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc06d082-14fa-49d4-bbf9-35b7c9f9d7b2")
-	)
 	(label "MATRIX_A1"
 		(at 124.46 161.29 180)
 		(effects
@@ -4858,7 +4858,7 @@
 	)
 	(global_label "CAP_VOLT"
 		(shape input)
-		(at 113.03 153.67 0)
+		(at 124.46 92.71 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4866,9 +4866,9 @@
 			)
 			(justify left)
 		)
-		(uuid "4cca78aa-3759-4b16-9fb4-274accbbd775")
+		(uuid "80dbb6b2-83de-4005-93ba-2642f8ebb8f5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.0262 153.67 0)
+			(at 136.4562 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6100,6 +6100,84 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 105.41 153.67 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7831cd62-a298-4c17-b183-805f0d37281d")
+		(property "Reference" "TP7"
+			(at 110.998 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 109.9819 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 105.41 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 105.41 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "43e098a6-eac7-43cc-893c-5bef47657fd8")
+		)
+		(instances
+			(project "micro-affirmations"
+				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541"
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -8209,84 +8287,6 @@
 			(project "micro-affirmations"
 				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541"
 					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 105.41 92.71 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f7ca4ff3-8d51-465c-af43-84bee002846b")
-		(property "Reference" "TP7"
-			(at 110.998 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 109.9819 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 105.41 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 105.41 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "859c2ff3-63b7-4b00-b401-264f729c0b88")
-		)
-		(instances
-			(project "micro-affirmations"
-				(path "/5bc9bd8c-4e85-4538-85a6-329775c75541"
-					(reference "TP7")
 					(unit 1)
 				)
 			)

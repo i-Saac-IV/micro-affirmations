@@ -321,7 +321,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "RevC"
+      "sch_revision": "RevD"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -847,7 +847,7 @@
         "uuid": "5bc9bd8c-4e85-4538-85a6-329775c75541"
       }
     ],
-    "used_designators": "",
+    "used_designators": "TP7",
     "variants": []
   },
   "sheets": [
