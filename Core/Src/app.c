@@ -49,25 +49,24 @@ void enter_shutdown(void) {
 #include "nanoGL.h"
 #include "messages.h"
 
+void app_updateMultiplex(void) {
+    matrix_updateMultiplex();
+}
+
 void app_main(void) {
+    nanoGL_clear();
 
     size_t message_index = ADC_Read(ADC_RANDOM) % number_of_messages;
 
-    uint32_t last_frame_end_ms = 0;
     uint32_t next_text_shift_ms = 0;
-
-    nanoGL_clear();
 
     static int16_t scrollX = PHYSICAL_COLS;
 
     if (HAL_GPIO_ReadPin(CHARGE_SENSE_GPIO_Port, CHARGE_SENSE_Pin)) {
-        
+
     }
 
     while (1) {
-        matrix_updateMultiplex();
-        last_frame_end_ms = HAL_GetTick();
-
         if (HAL_GetTick() > next_text_shift_ms) {
             next_text_shift_ms = HAL_GetTick() + 50;
             nanoGL_clear();
@@ -80,7 +79,5 @@ void app_main(void) {
                 scrollX = PHYSICAL_COLS;
             }
         }
-
-        while (HAL_GetTick() < last_frame_end_ms + 1) {};
     }    
 }
