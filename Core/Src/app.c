@@ -10,6 +10,8 @@ Author: Isaac Pawley
 #include "adc.h"
 #include "stm32c0xx_hal.h"
 
+#define DEBUG_ENABLED 0
+
 typedef enum {
     ADC_RANDOM,
     ADC_CAP_VOLT
@@ -77,8 +79,12 @@ void app_main(void) {
             scrollX--;
             
             if (scrollX < -nanoGL_stringWidth(messages[message_index], &Font_5x5)) {
-                message_index = ADC_Read(ADC_RANDOM) % number_of_messages;
-                scrollX = PHYSICAL_COLS;
+                if (!DEBUG_ENABLED) {
+                    message_index = ADC_Read(ADC_RANDOM) % number_of_messages;
+                    scrollX = PHYSICAL_COLS;
+                } else {
+                    enter_shutdown();
+                }               
             }
         }
     }    
