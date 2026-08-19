@@ -51,7 +51,7 @@ __weak const char *messages[] = {
 
 # Project Updates
 ## Hardware [RevD](https://github.com/i-Saac-IV/micro-affirmations/tree/v0.9.3)
-After considerable development to the code, I found out that I had not connected the supercapacitor voltage sensing circuit to a ADC capable pin, this has been corrected.
+After considerable development to the code, I found out that I had not connected the supercapacitor voltage sensing circuit to a ADC capable pin, this has been corrected. I also found that if the input voltage of the charging IC is greater than the output voltage = 100mV the bucking function of the IC is bypassed (meaning if the input is 5V the output is also 5V, bad for the STM chip), this has been fixed with the linear regulator.
 
 ## Hardware [RevC](https://github.com/i-Saac-IV/micro-affirmations/tree/v0.9.2)
 After futher testing the following fixes to the hardware design have been made:
