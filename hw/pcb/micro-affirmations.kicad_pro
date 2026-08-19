@@ -56,59 +56,23 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "clearance|168097200|116918211|ec104548-879f-48dc-8208-7dc768dd9116|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          "clearance|167767000|118410000|210d5105-543b-4e21-a195-c9ff52505297|98b46978-f7e7-4b11-968a-730252a542c0",
           ""
         ],
         [
-          "clearance|168097200|117412622|8363f73c-01d9-4a68-ad14-91caa4eba88c|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          "clearance|171527549|103522703|c6d6c1c5-ecc6-4ba7-81f4-8500c5f07a87|e76ccf00-d0b0-4e7b-a983-9a7dec783f24",
           ""
         ],
         [
-          "clearance|168097200|117912748|469f01aa-f1c7-4d62-8cf5-fb45d4812bf0|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          "clearance|175542066|105542066|352a8f4a-c211-4f15-a3c1-ad6ddb549dcc|b188e030-8291-4191-9d5d-ef3a63d3cdad",
           ""
         ],
         [
-          "clearance|168097200|118412874|4815512d-599c-4d36-9c0f-42b80b2ed166|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          "clearance|179120109|101233445|3e0e7846-20d5-4be6-8ff4-f27780b18d12|b609fba6-8088-4731-b895-c3361a99232a",
           ""
         ],
         [
-          "clearance|168097200|118913000|c7c2835c-b5d2-4d12-9684-5160cae28f32|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
-          ""
-        ],
-        [
-          "clearance|168097200|119413126|d2dddd6b-10fd-47fe-92b8-e0fe46edd436|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
-          ""
-        ],
-        [
-          "clearance|168097200|119667126|138deb7a-c070-42df-b33c-afb25b4b0f58|d2dddd6b-10fd-47fe-92b8-e0fe46edd436",
-          ""
-        ],
-        [
-          "clearance|168249600|118410000|98b46978-f7e7-4b11-968a-730252a542c0|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
-          ""
-        ],
-        [
-          "clearance|168249600|118900000|1bb189a4-6af1-47dd-bb62-f9927b6870f0|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
-          ""
-        ],
-        [
-          "clearance|169341800|118670000|4bb986c2-d7b5-4f07-b4cd-a4df2d2c3cff|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
-          ""
-        ],
-        [
-          "clearance|169494200|116918211|fd86322e-4923-44cd-997c-cf215efe5199|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
-          ""
-        ],
-        [
-          "clearance|169494200|117412622|2e5ebe05-eaf7-47c6-a48d-ddddc1264d06|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
-          ""
-        ],
-        [
-          "clearance|169494200|117912748|219c5f6c-5663-43f1-87d7-a90e57e5ab09|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
-          ""
-        ],
-        [
-          "clearance|169494200|118412874|75bb91e6-2ce3-4862-b666-0ff005421568|dc4ea845-f4cd-4b0f-bf4c-4ccbfc16b3cc",
+          "clearance|179473662|101586998|87c2b068-53a6-4884-b567-725173cb77ca|8caa2f39-e977-4177-989a-4cb24790df38",
           ""
         ],
         [
@@ -120,35 +84,11 @@
           ""
         ],
         [
-          "silk_edge_clearance|116454819|112179999|19fb80d8-6bbb-4330-9e64-b3d411189291|7c8ba0f4-5960-4088-88e9-b5b21fcb552f",
-          ""
-        ],
-        [
-          "silk_edge_clearance|120426132|112180000|82d57448-9f6f-4612-bab0-0b979d3f8cb0|866eb6cc-d320-4c69-9721-969700df5507",
-          ""
-        ],
-        [
-          "silk_over_copper|116454819|112179999|7c8ba0f4-5960-4088-88e9-b5b21fcb552f|19fb80d8-6bbb-4330-9e64-b3d411189291",
-          ""
-        ],
-        [
-          "silk_over_copper|120426132|112180000|866eb6cc-d320-4c69-9721-969700df5507|82d57448-9f6f-4612-bab0-0b979d3f8cb0",
-          ""
-        ],
-        [
           "silk_overlap|125781724|101554819|200cc061-e5b3-4576-984e-11ca65d11057|71b48308-072b-48f1-9cb7-98ced32d89e1",
           ""
         ],
         [
-          "silk_overlap|130861724|101554819|97a36f83-9cc6-4a12-a396-243a2634cf23|df09e7c7-4154-45e5-921d-b2f56f0a9683",
-          ""
-        ],
-        [
           "silk_overlap|135941724|101554819|078dd98c-0c27-4075-86a8-5838457615c4|713f1456-6795-4905-9e69-3400eb13e002",
-          ""
-        ],
-        [
-          "silk_overlap|141021724|101554819|54728df6-37c0-498f-b4de-055d4f9cd3e9|a6f5dc3f-34d0-4959-b5b4-15f5d4c096be",
           ""
         ]
       ],
@@ -646,7 +586,7 @@
         "via_drill": 0.3
       },
       {
-        "clearance": 0.2,
+        "clearance": 0.3,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
         "microvia_diameter": 0.3,
@@ -672,7 +612,7 @@
         "pattern": "+3V3"
       },
       {
-        "netclass": "Default",
+        "netclass": "High Current",
         "pattern": "GND"
       },
       {
@@ -686,6 +626,10 @@
       {
         "netclass": "Fine",
         "pattern": "/supercapacitor-charger/CAP_VOLT"
+      },
+      {
+        "netclass": "High Current",
+        "pattern": "/CHARGE_SENSE"
       }
     ]
   },
@@ -705,7 +649,7 @@
       "method": 0,
       "sort_order": 1
     },
-    "bom_export_filename": "${PROJECTNAME}_${REVISION}_BOM.csv",
+    "bom_export_filename": "${PROJECTNAME}_BOM.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -728,18 +672,6 @@
         },
         {
           "group_by": false,
-          "label": "Qty",
-          "name": "${QUANTITY}",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "Value",
-          "name": "Value",
-          "show": true
-        },
-        {
-          "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
           "show": false
@@ -751,16 +683,22 @@
           "show": false
         },
         {
+          "group_by": true,
+          "label": "Value",
+          "name": "Value",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
           "group_by": false,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
           "show": false
-        },
-        {
-          "group_by": true,
-          "label": "Footprint",
-          "name": "Footprint",
-          "show": true
         },
         {
           "group_by": false,
@@ -772,6 +710,12 @@
           "group_by": false,
           "label": "PN",
           "name": "PN",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
           "show": true
         },
         {
@@ -797,14 +741,26 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
-      "sort_asc": true,
-      "sort_field": "Footprint"
+      "sort_asc": false,
+      "sort_field": "${DNP}"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -847,7 +803,7 @@
         "uuid": "5bc9bd8c-4e85-4538-85a6-329775c75541"
       }
     ],
-    "used_designators": "TP7",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
