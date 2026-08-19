@@ -13,7 +13,7 @@ Author: Isaac Pawley
 
 __weak const char *messages[] = {
     "uAffirmations - A microcontroller-based affection-giving MACHINE!",
-    "Whoops, it looks like you forgot to add you own messages!",
+    "Whoops, it looks like you forgot to add your own messages!",
     "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
 };
 
