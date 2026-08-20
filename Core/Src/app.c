@@ -12,6 +12,10 @@ Author: Isaac Pawley
 
 #define DEBUG_ENABLED 0
 
+#define STM_VCC         3.6f
+#define ADC_BITS        4095.0f
+#define MAX_CAP_VOLTAGE 2.1f
+
 typedef enum {
     ADC_RANDOM,
     ADC_CAP_VOLT
@@ -24,11 +28,11 @@ uint16_t ADC_Read(ADC_Input_t input) {
     HAL_ADC_Start(&hadc1);
 
     if (HAL_ADC_PollForConversion(&hadc1, 10) == HAL_OK) {
-        random_value = HAL_ADC_GetValue(&hadc1);
+        cap_voltage_value = HAL_ADC_GetValue(&hadc1);
     }
 
     if (HAL_ADC_PollForConversion(&hadc1, 10) == HAL_OK) {
-        cap_voltage_value = HAL_ADC_GetValue(&hadc1);
+        random_value = HAL_ADC_GetValue(&hadc1);
     }
 
     HAL_ADC_Stop(&hadc1);
@@ -67,7 +71,31 @@ void app_main(void) {
     static int16_t scrollX = PHYSICAL_COLS;
 
     while (HAL_GPIO_ReadPin(CHARGE_SENSE_GPIO_Port, CHARGE_SENSE_Pin)) {
+        if (HAL_GetTick() >= next_text_shift_ms) {
+        next_text_shift_ms = HAL_GetTick() + 1000;
+
+        uint16_t capacitor_voltage = ADC_Read(ADC_CAP_VOLT);
+
+        float voltage = capacitor_voltage * STM_VCC / ADC_BITS;
+        float width = (voltage - 0.6f) * (PHYSICAL_COLS - 2) / MAX_CAP_VOLTAGE;
+        
+        if (width < 0.0f) {
+            width = 0.0f;
+        }
+
+        if (width > 18.0f) {
+            width = 18.0f;
+        }
+
+        __disable_irq();
+
+        nanoGL_clear();
+
         nanoGL_drawBitmap(0, 0, battery_20x5, 20, 5);
+        nanoGL_drawFilledRectangle(0, 1, width, 3);
+
+        __enable_irq();
+    }
     }
 
     while (1) {

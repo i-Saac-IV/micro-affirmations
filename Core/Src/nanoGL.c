@@ -89,3 +89,16 @@ void nanoGL_drawBitmap(int16_t x, int16_t y, const unsigned char* bitmap, uint8_
         }
     }
 }
+
+void nanoGL_drawFilledRectangle(int16_t x1, int16_t y1, uint8_t x2, uint8_t y2) {
+    uint8_t x_start = ((x1<=x2) ? x1 : x2);
+    uint8_t x_end   = ((x1<=x2) ? x2 : x1);
+    uint8_t y_start = ((y1<=y2) ? y1 : y2);
+    uint8_t y_end   = ((y1<=y2) ? y2 : y1);
+
+    for (uint8_t y= y_start; (y<= y_end)&&(y<PHYSICAL_ROWS); y++) {
+        for (uint8_t x= x_start; (x<= x_end)&&(x<PHYSICAL_COLS); x++) {
+            matrix_setPixel(x, y, MATRIX_ON);
+        }
+    }
+}
