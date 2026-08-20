@@ -76,8 +76,11 @@ endif
 # C sources
 C_SOURCES =  \
 Core/Src/adc.c \
+Core/Src/adc_handler.c \
 Core/Src/app.c \
 Core/Src/bitmaps.c \
+Core/Src/capacitor.c \
+Core/Src/dma.c \
 Core/Src/fonts.c \
 Core/Src/gpio.c \
 Core/Src/main.c \
