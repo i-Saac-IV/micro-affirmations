@@ -66,13 +66,9 @@ void app_main(void) {
                 } else {
                     capacitor_update();
 
-                    HAL_Delay(3000);
+                    HAL_Delay(1500);
 
-                    nanoGL_clear();
-                    //enter_shutdown();
-                    while (1) {
-
-                    }
+                    enter_shutdown();
                 }               
             }
         }
