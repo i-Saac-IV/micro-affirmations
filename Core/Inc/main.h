@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define CHARGE_SENSE_Pin GPIO_PIN_3
 #define CHARGE_SENSE_GPIO_Port GPIOF
+#define CAP_VOLT_Pin GPIO_PIN_0
+#define CAP_VOLT_GPIO_Port GPIOA
 #define RANDOM_Pin GPIO_PIN_1
 #define RANDOM_GPIO_Port GPIOA
 #define MATRIX_A9_Pin GPIO_PIN_3
@@ -101,8 +103,6 @@ void Error_Handler(void);
 #define MATRIX_K1_GPIO_Port GPIOA
 #define MATRIX_K0_Pin GPIO_PIN_12
 #define MATRIX_K0_GPIO_Port GPIOA
-#define CAP_VOLT_Pin GPIO_PIN_7
-#define CAP_VOLT_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
