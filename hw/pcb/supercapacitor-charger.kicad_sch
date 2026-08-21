@@ -1826,7 +1826,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 97.79) (xy 104.14 97.79)
+			(xy 125.73 97.79) (xy 107.95 97.79)
 		)
 		(stroke
 			(width 0)
@@ -1886,7 +1886,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 97.79) (xy 104.14 100.33)
+			(xy 107.95 97.79) (xy 107.95 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2118,7 +2118,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 104.14 107.95 0)
+		(at 107.95 107.95 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -2130,7 +2130,7 @@
 		(fields_autoplaced yes)
 		(uuid "0999a460-075d-4247-b961-628089d90774")
 		(property "Reference" "#PWR034"
-			(at 104.14 114.3 0)
+			(at 107.95 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2141,7 +2141,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 104.14 113.03 0)
+			(at 107.95 113.03 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2151,7 +2151,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 107.95 0)
+			(at 107.95 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2162,7 +2162,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 107.95 0)
+			(at 107.95 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2173,7 +2173,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 104.14 107.95 0)
+			(at 107.95 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2986,7 +2986,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 104.14 104.14 0)
+		(at 107.95 104.14 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -2998,7 +2998,7 @@
 		(fields_autoplaced yes)
 		(uuid "69202172-abed-4db6-b10f-a17fbf5e7061")
 		(property "Reference" "R26"
-			(at 101.6 102.8699 0)
+			(at 105.41 102.8699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3009,7 +3009,7 @@
 			)
 		)
 		(property "Value" "4.75k"
-			(at 101.6 105.4099 0)
+			(at 105.41 105.4099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3020,7 +3020,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 102.362 104.14 90)
+			(at 106.172 104.14 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3031,7 +3031,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 104.14 0)
+			(at 107.95 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3042,7 +3042,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 104.14 104.14 0)
+			(at 107.95 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3053,7 +3053,7 @@
 			)
 		)
 		(property "PN" "CPF0603F4K75C1"
-			(at 104.14 104.14 0)
+			(at 107.95 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3064,7 +3064,7 @@
 			)
 		)
 		(property "Field6" ""
-			(at 104.14 104.14 0)
+			(at 107.95 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3075,7 +3075,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 104.14 104.14 0)
+			(at 107.95 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3086,7 +3086,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 104.14 104.14 0)
+			(at 107.95 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3794,6 +3794,7 @@
 	(symbol
 		(lib_id "Device:D_Schottky_Dual_CommonCathode_AAK")
 		(at 124.46 76.2 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3801,7 +3802,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "9b547a07-397a-455b-a07f-328d05ad0d78")
 		(property "Reference" "D2"
 			(at 124.46 72.39 0)
