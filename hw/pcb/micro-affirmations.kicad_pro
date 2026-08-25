@@ -693,7 +693,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "gerbers/RevD/",
+      "plot": "gerbers/RevD-not/",
       "specctra_dsn": "",
       "vrml": ""
     },
