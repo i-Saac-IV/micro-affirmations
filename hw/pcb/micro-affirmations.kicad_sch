@@ -7981,7 +7981,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33k"
+		(property "Value" "33k*"
 			(at 118.11 41.9099 0)
 			(show_name no)
 			(do_not_autoplace no)
