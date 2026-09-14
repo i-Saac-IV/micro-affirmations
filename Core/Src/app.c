@@ -32,7 +32,7 @@ void app_updateMultiplex(void) {
 
 void app_main(void) {
     nanoGL_clear();
-    adc_handler_init();
+    adc_handler_start();
 
     while (!adc_handler_isReady()) {
         // wait...
@@ -47,6 +47,7 @@ void app_main(void) {
     while (HAL_GPIO_ReadPin(CHARGE_SENSE_GPIO_Port, CHARGE_SENSE_Pin)) {
         if (HAL_GetTick() >= next_update_ms) {
             next_update_ms = HAL_GetTick() + 1000;
+            adc_handler_start();
             capacitor_update();
         }
     }
@@ -64,6 +65,7 @@ void app_main(void) {
                     message_index = adc_handler_getValue(ADC_RANDOM) % number_of_messages;
                     scrollX = PHYSICAL_COLS;
                 } else {
+                    adc_handler_start();
                     capacitor_update();
 
                     HAL_Delay(1500);

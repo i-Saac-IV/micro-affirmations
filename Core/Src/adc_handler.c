@@ -7,13 +7,12 @@ Author: Isaac Pawley
 
 #include "adc_handler.h"
 
-volatile uint16_t adc_values[NUMBER_OF_ADC_INPUTS] = {0};
+static uint16_t adc_values[NUMBER_OF_ADC_INPUTS];
 volatile bool adc_ready = false;
 
-void adc_handler_init(void) {
+void adc_handler_start(void) {
     adc_ready = false;
-
-    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adc_values, NUMBER_OF_ADC_INPUTS);
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_values, NUMBER_OF_ADC_INPUTS);
 }
 
 uint16_t adc_handler_getValue(ADC_Input_t input) {

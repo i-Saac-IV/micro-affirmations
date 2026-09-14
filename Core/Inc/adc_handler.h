@@ -18,7 +18,7 @@ typedef enum {
     NUMBER_OF_ADC_INPUTS
 } ADC_Input_t;
 
-void adc_handler_init(void);
+void adc_handler_start(void);
 uint16_t adc_handler_getValue(ADC_Input_t input);
 bool adc_handler_isReady(void);
 
