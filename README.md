@@ -15,7 +15,7 @@ A microcontroller-based affection-giving MACHINE!
 
 # Usage Guide
 ## Hardware
-The PCB files can be found [here](/hw/pcb/micro-affirmations.zip), be sure of order a solder stencil too(ideally with a stencil unless you love hand-soldering 200+ SMD connections). The [BOM](/hw/pcb/micro-affirmations_BOM.csv) will provide you with a list of parts required. Due to the limited size on the PCB, many of the reference designators have been removed to save space. Because of this, you will likely need to have KiCAD running as you are placing components. Or you can guess I suppose...
+The PCB files can be found [here](/hw/pcb/micro-affirmations.zip), be sure of order a solder stencil too(ideally with a stencil unless you love hand-soldering 200+ SMD connections). The [BOM](/hw/pcb/bom/ibom.html) will provide you with a list of parts required and their placements. Due to the limited size on the PCB, many of the reference designators have been removed to save space. Because of this, you will likely need to have KiCAD or the iBOM running as you are placing components. Or you can guess I suppose...
 
 ## Firmware
 You will need access to an ST-Link programming device and have [stm32-for-vscode](https://open-vsx.org/extension/bmd/stm32-for-vscode) extension installed. Once you're ready, upload the code by:
