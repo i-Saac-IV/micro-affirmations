@@ -46,7 +46,7 @@ void app_main(void) {
 
     while (HAL_GPIO_ReadPin(CHARGE_SENSE_GPIO_Port, CHARGE_SENSE_Pin)) {
         if (HAL_GetTick() >= next_update_ms) {
-            next_update_ms = HAL_GetTick() + 1000;
+            next_update_ms = HAL_GetTick() + 100;
             adc_handler_start();
             capacitor_update();
         }
